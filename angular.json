@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "store": {
+    "store2": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:class": {
@@ -38,7 +38,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/store",
+            "outputPath": "dist/store2",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -49,7 +49,8 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+              "src/assets"
             ],
             "styles": [
               "src/styles.css"
@@ -89,10 +90,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "store:build:production"
+              "buildTarget": "store2:build:production"
             },
             "development": {
-              "buildTarget": "store:build:development"
+              "buildTarget": "store2:build:development"
             }
           },
           "defaultConfiguration": "development"
